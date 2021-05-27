@@ -1,8 +1,8 @@
 ---
 layout: page
-lang: en
-title: projects
-permalink: /projects/
+lang: zh
+title: 项目
+permalink: /zh/projects/
 description: A growing collection of your cool projects.
 nav: true
 ---

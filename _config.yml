@@ -2,21 +2,22 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-email: you@example.com
+title: Ye Bai # the website title (if blank, full name will be used instead)
+first_name: Ye
+middle_name:
+last_name: Bai
+zh_name: (<span style="font-family:fangzhengkaiti">白烨</span>)
+email: baiye2016@ia.ac.cn
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 
 icon: 🔥 # the emoji used as the favicon
-url:  # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/
+url: / # the base hostname & protocol for your site
+baseurl:  # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -68,13 +69,15 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio  # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
-permalink: /blog/:year/:title/
+blog_name: Blog  # your blog must have a name for it to show up in the nav bar
+blog_description: 
+blog_name_zh: 博客
+blog_description_zh: 
+permalink: /:categories/blog/:year/:title/
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 # Comments
 disqus_shortname: al-folio # put your disqus shortname
@@ -92,6 +95,16 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  blog:
+    defaults:
+      layout: post
+    output: true
+    permalink: /blog/:path/
+  blogzh:
+    defaults:
+      layout: post
+    output: true
+    permalink: /zh/blog/:path/
 
 news_limit: 5
 
@@ -143,8 +156,8 @@ github: [metadata]
 
 scholar:
 
-  last_name: Einstein
-  first_name: [Albert, A.]
+  last_name: Bai
+  first_name: Ye
 
   style: apa
   locale: en
@@ -160,6 +173,8 @@ scholar:
   details_layout: bibtex.html
   details_link: Details
 
+  sort_by: year
+  order: descending
   query: "@*"
 
 # -----------------------------------------------------------------------------
